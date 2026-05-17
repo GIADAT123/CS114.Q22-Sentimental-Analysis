@@ -1,0 +1,33 @@
+{
+    "model": "TF-IDF word + char + handcrafted features + LinearSVC",
+    "optimization_metric": "validation_macro_f1",
+    "preprocessing": {
+        "emoji": "emoji converted to English tokens, e.g. emoji_smiling_face",
+        "mentions": "@mention and <username> converted to username_token",
+        "urls": "URL and <url> converted to url_token",
+        "names": "<name> converted to name_token",
+        "numbers": "numeric values and <number> converted to number_token"
+    },
+    "word_tfidf_max_features": 80000,
+    "word_ngram_range": "(1, 2)",
+    "char_tfidf_max_features": 30000,
+    "char_ngram_range": "(3, 4)",
+    "best_C": 0.25,
+    "validation_accuracy": 0.8086182480275137,
+    "validation_macro_f1": 0.7981149246271275,
+    "validation_weighted_f1": 0.8060555903989945,
+    "best_model_train_time_sec": 1052.004951076,
+    "best_model_val_infer_time_total_sec": 0.026161118000345596,
+    "best_model_val_infer_time_avg_sec_per_sample": 5.292558770047663e-06,
+    "test_accuracy_before_final_retrain": 0.8021644583796905,
+    "test_macro_f1_before_final_retrain": 0.7898345456862997,
+    "test_weighted_f1_before_final_retrain": 0.8001071256795443,
+    "test_infer_time_total_sec_before_final_retrain": 0.09709361600107513,
+    "test_infer_time_avg_sec_per_sample_before_final_retrain": 9.820331344298081e-06,
+    "final_train_time_sec": 1261.3664390970007,
+    "final_test_accuracy": 0.8040861737635279,
+    "final_test_macro_f1": 0.7917349955547393,
+    "final_test_weighted_f1": 0.8020125173658422,
+    "final_test_infer_time_total_sec": 0.04491000400048506,
+    "final_test_infer_time_avg_sec_per_sample": 4.542328714522611e-06
+}
