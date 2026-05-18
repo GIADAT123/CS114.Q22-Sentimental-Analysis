@@ -1,0 +1,13 @@
+streamlit
+numpy
+pandas
+scikit-learn
+joblib
+lightgbm
+ftfy
+emoji
+wordsegment
+scipy
+plotly
+matplotlib
+seaborn
