@@ -1,0 +1,50 @@
+{
+    "model": "TF-IDF + SelectKBest(chi2) + DecisionTreeClassifier",
+    "feature_extraction": {
+        "tfidf": {
+            "analyzer": "word",
+            "ngram_range": [
+                1,
+                2
+            ],
+            "min_df": 3,
+            "max_df": 0.95,
+            "max_features": 100000,
+            "sublinear_tf": true
+        },
+        "select_k_best": {
+            "score_func": "chi2",
+            "k": 20000
+        }
+    },
+    "classifier": {
+        "name": "DecisionTreeClassifier",
+        "criterion": "gini",
+        "max_depth": 50,
+        "min_samples_split": 10,
+        "min_samples_leaf": 5,
+        "class_weight": "balanced",
+        "random_state": 42
+    },
+    "training_time_sec": 46.50983825200001,
+    "val": {
+        "split": "val",
+        "accuracy": 0.6671388101983002,
+        "macro_f1": 0.6428484745706684,
+        "weighted_f1": 0.6670447931386321,
+        "infer_time_total_sec": 0.7530052920001253,
+        "infer_time_avg_sec_per_sample": 0.00015236853338731796
+    },
+    "test": {
+        "split": "test",
+        "accuracy": 0.6635646368602064,
+        "macro_f1": 0.6378151430849123,
+        "weighted_f1": 0.6652884818293988,
+        "infer_time_total_sec": 1.4235944810000092,
+        "infer_time_avg_sec_per_sample": 0.0001440010601861227
+    },
+    "val_infer_time_total_sec": 0.7530052920001253,
+    "val_infer_time_avg_sec_per_sample": 0.00015236853338731796,
+    "test_infer_time_total_sec": 1.4235944810000092,
+    "test_infer_time_avg_sec_per_sample": 0.0001440010601861227
+}
