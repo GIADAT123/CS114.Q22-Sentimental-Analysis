@@ -1,0 +1,50 @@
+BAO CAO PHAN LOP - tfidf_stack_no_leak_word13_charwb35_k35000_v1
+================================================================================
+
+Best weights: {'anxiety': 1.0, 'depression': 1.399999976158142, 'normal': 1.0, 'suicidal': 1.149999976158142}
+Macro F1 OOF Train: 0.8052
+Macro F1 Val:       0.8208
+Macro F1 Test:      0.8104
+
+--- OOF TRAIN SET ---
+              precision    recall  f1-score   support
+
+     anxiety     0.8108    0.8597    0.8346      3899
+  depression     0.7454    0.7300    0.7377     10153
+      normal     0.9334    0.9265    0.9299     12693
+    suicidal     0.7155    0.7218    0.7186      7840
+
+    accuracy                         0.8149     34585
+   macro avg     0.8013    0.8095    0.8052     34585
+weighted avg     0.8150    0.8149    0.8148     34585
+
+================================================================================
+
+--- VALIDATION SET ---
+              precision    recall  f1-score   support
+
+     anxiety     0.8408    0.8815    0.8606       557
+  depression     0.7645    0.7519    0.7582      1451
+      normal     0.9333    0.9421    0.9377      1812
+    suicidal     0.7334    0.7203    0.7268      1119
+
+    accuracy                         0.8291      4939
+   macro avg     0.8180    0.8239    0.8208      4939
+weighted avg     0.8280    0.8291    0.8285      4939
+
+================================================================================
+
+--- TEST SET ---
+              precision    recall  f1-score   support
+
+     anxiety     0.8183    0.8654    0.8412      1114
+  depression     0.7495    0.7448    0.7471      2900
+      normal     0.9360    0.9316    0.9338      3625
+    suicidal     0.7241    0.7147    0.7193      2236
+
+    accuracy                         0.8202      9875
+   macro avg     0.8070    0.8141    0.8104      9875
+weighted avg     0.8200    0.8202    0.8200      9875
+
+================================================================================
+
