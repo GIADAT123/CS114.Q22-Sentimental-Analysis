@@ -1,0 +1,24 @@
+{
+    "model": "Multi-feature extraction + RidgeClassifier",
+    "training_time_sec": 140.09797974000003,
+    "val": {
+        "split": "val",
+        "accuracy": 0.7863645559376896,
+        "macro_f1": 0.7729908292866495,
+        "weighted_f1": 0.7832693542725858,
+        "infer_time_total_sec": 6.8479910720000134,
+        "infer_time_avg_sec_per_sample": 0.0013853916795468367
+    },
+    "test": {
+        "split": "test",
+        "accuracy": 0.7862850207342975,
+        "macro_f1": 0.7720002912205262,
+        "weighted_f1": 0.7842952147038745,
+        "infer_time_total_sec": 9.013858612999911,
+        "infer_time_avg_sec_per_sample": 0.0009116879349650967
+    },
+    "val_infer_time_total_sec": 6.8479910720000134,
+    "val_infer_time_avg_sec_per_sample": 0.0013853916795468367,
+    "test_infer_time_total_sec": 9.013858612999911,
+    "test_infer_time_avg_sec_per_sample": 0.0009116879349650967
+}
