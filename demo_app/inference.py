@@ -1,5 +1,4 @@
 # Import các thư viện dùng trong demo inference
-import os
 import re
 import ftfy
 import emoji

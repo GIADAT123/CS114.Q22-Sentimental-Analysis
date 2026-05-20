@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import time
 
 from inference import (
     predict_single_text,
@@ -226,9 +227,12 @@ if predict_btn:
 
         with st.spinner("Analyzing text..."):
 
+            start_time = time.time()
             result = predict_single_text(text)
+            predicted_label = result["predicted_label"]
+            end_time = time.time()
 
-        predicted_label = result["predicted_label"]
+        inference_time = end_time - start_time
 
         class_list = bundle["class_list"]
 
@@ -333,6 +337,19 @@ if predict_btn:
                 <div class="pred-conf">
                     {top_conf:.4f}
                 </div>
+            </div>
+            """, unsafe_allow_html=True)
+            # Thêm ô hiển thị time inference:
+            st.markdown("<br>", unsafe_allow_html=True)
+            st.markdown("""
+            <div class="small-label">
+                Inference Time: 
+            </div>
+            """, unsafe_allow_html=True)
+            # chỉ hiển thị 4 chữ số thập phân của thời gian, không cần ô box riêng:
+            st.markdown(f"""
+            <div class="pred-conf">
+                {inference_time:.4f} seconds
             </div>
             """, unsafe_allow_html=True)
 
